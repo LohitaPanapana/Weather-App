@@ -12,7 +12,7 @@ app.locals.moment = require('moment');
 
 //Get weather data by making a call to weather API
 app.get("/", function(req, res){
-    let location = req.query.search;
+    let location = req.query.search || 'London';
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth()+1) + '-' +today.getDate();
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=d0783d7b08a751209bc77567140ebbb5`;
