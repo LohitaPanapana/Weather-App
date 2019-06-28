@@ -15,11 +15,11 @@ app.get("/", function(req, res){
     let location = req.query.search || 'London';
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth()+1) + '-' +today.getDate();
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=d0783d7b08a751209bc77567140ebbb5`;
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=d0783d7b08a751209bc77567140ebbb5`;
     request(url, function(error, response, body){
         if(!error && response.statusCode == 200){
             let currentData = JSON.parse(body);
-            let forcastUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=d0783d7b08a751209bc77567140ebbb5`;
+            let forcastUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=d0783d7b08a751209bc77567140ebbb5`;
             request(forcastUrl, function(error, response, body){
                 let forcastData = JSON.parse(body);
                 let weatherMap = code.getUnique(forcastData.list);
