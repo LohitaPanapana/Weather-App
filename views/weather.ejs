@@ -16,10 +16,10 @@
                 <div class="row d-flex justify-content-center">
                     <form class="form-inline" action="/" method="GET">
                         <div class="form-group row">
-                            <div class="col-md-10">
-                                <input type="text" class="form-control w-100" id="search" name="search" placeholder="City, zipcode, city id">
+                            <div class="col-md-10 pb-2 pb-md-0">
+                                <input type="text" class="form-control w-100" id="search" name="search" placeholder="City, zipcode, city id" autofocus>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-12">
                                 <button class="btn btn-primary">Search</button>
                             </div>
                         </div>
@@ -30,13 +30,13 @@
         <section id="main">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-4 col-sm-10 col-xs-8 content">
+                    <div class="col-md-6 col-sm-10 content">
                         <h2 class="text-center"><%= weather.name.toUpperCase() %></h2>
                         <div class="row">
-                            <div class="col-md-4 col-xs">
+                            <div class="offset-md-1 col-md-4 col-sm-4 pr-md-3">
                                 <img src="http://openweathermap.org/img/w/<%= weather.weather[0].icon %>.png" class="img-fluid icon">
                             </div>
-                            <div class="col-md-8 col-xs">
+                            <div class="col-md-6 col-sm-8">
                                 <h4><%= weather.main.temp%> &deg;C</h4>
                                 <p>Humidity: <%= weather.main.humidity %></p>
                                 <p><%=weather.weather[0].description %></p>
