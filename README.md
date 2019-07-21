@@ -10,7 +10,7 @@ Using this app, current weather can be found out based on
 In addition to displaying current weather, this app all display the weather forcast for next **5 days**.
 ## Getting Started
 
-###Prereqisites
+### Prerequisites
 
 Get [Open weather website](https://openweathermap.org/api) and get an API KEY to query the API for weather data.
 
